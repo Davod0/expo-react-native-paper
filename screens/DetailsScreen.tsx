@@ -1,13 +1,15 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Surface } from 'react-native-paper';
 import { pokemons } from '../data';
 import { RootStackParamList } from '../navigators/RootStackNavigator';
-import { Surface } from 'react-native-paper';
 
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Details'>;
 
 export default function DetailsScreen(props: Props) {
+
 
   const pokemon = pokemons.find(pokemon => pokemon.name === props.route.params.name);
   if(!pokemon) return null;

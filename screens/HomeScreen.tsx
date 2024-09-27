@@ -1,6 +1,6 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { Surface } from 'react-native-paper';
+import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Card, IconButton } from 'react-native-paper';
 import { pokemons } from '../data';
 import { RootStackParamList } from '../navigators/RootStackNavigator';
 
@@ -15,9 +15,13 @@ export default function HomeScreen({navigation, route}: Props) {
             <Pressable key={pokemon.name}
                 onPress={() => navigation.navigate("Details", {name: pokemon.name})}
                 style={{padding:10}}>
-               <Surface>
-                  <Text style={styles.text}>{pokemon.name}</Text>
-                </Surface>     
+               <Card>
+                  <Card.Title title={pokemon.name} subtitle={pokemon.type}
+                   left={() => <Image width={60} height={60}
+                   style={{marginLeft: -12}} source={{uri: pokemon.url}}/>}
+                   right={(props) => <IconButton {...props} icon="chevron-right" />}
+                  />
+                </Card>     
             </Pressable>
         ))}
     </View>

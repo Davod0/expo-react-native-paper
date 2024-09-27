@@ -11,7 +11,7 @@ interface Pokemon {
 export const pokemons: Pokemon[] = [
     {
         name: "Pikachu",
-        url: "https://pokeapi.co/api/v2/pokemon/25/",
+        url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
         type: "Electric",
         rarity: "Common",
         hp: 35,
@@ -20,7 +20,7 @@ export const pokemons: Pokemon[] = [
     },
     {
         name: "Charizard",
-        url: "https://pokeapi.co/api/v2/pokemon/6/",
+        url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
         type: "Fire/Flying",
         rarity: "Rare",
         hp: 78,
@@ -29,7 +29,7 @@ export const pokemons: Pokemon[] = [
     },
     {
         name: "Bulbasaur",
-        url: "https://pokeapi.co/api/v2/pokemon/1/",
+        url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
         type: "Grass/Poison",
         rarity: "Common",
         hp: 45,
@@ -38,7 +38,7 @@ export const pokemons: Pokemon[] = [
     },
     {
         name: "Gengar",
-        url: "https://pokeapi.co/api/v2/pokemon/94/",
+        url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
         type: "Ghost/Poison",
         rarity: "Rare",
         hp: 60,
@@ -47,7 +47,7 @@ export const pokemons: Pokemon[] = [
     },
     {
         name: "Lapras",
-        url: "https://pokeapi.co/api/v2/pokemon/131/",
+        url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
         type: "Water/Ice",
         rarity: "Legendary",
         hp: 130,
