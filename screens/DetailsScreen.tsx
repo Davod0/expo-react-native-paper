@@ -2,6 +2,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { StyleSheet, Text, View } from 'react-native';
 import { pokemons } from '../data';
 import { RootStackParamList } from '../navigators/RootStackNavigator';
+import { Surface } from 'react-native-paper';
 
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Details'>;
@@ -14,9 +15,11 @@ export default function DetailsScreen(props: Props) {
   return (
     <View style={styles.container}>
       <Text style={{paddingBottom:20, fontSize:40}}>Details Screen</Text>
-      <Text style={styles.text}>Pokemon name: {pokemon.name}</Text>
-      <Text style={styles.text}>Pokemon type: {pokemon.type}</Text>
-      <Text style={styles.text}>Pokemon rarity: {pokemon.rarity}</Text>
+      <Surface>
+        <Text style={styles.text}>Pokemon name: {pokemon.name}</Text>
+        <Text style={styles.text}>Pokemon type: {pokemon.type}</Text>
+        <Text style={styles.text}>Pokemon rarity: {pokemon.rarity}</Text>
+      </Surface>  
     </View>
   );
 }
