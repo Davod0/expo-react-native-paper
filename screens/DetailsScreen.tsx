@@ -1,7 +1,6 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Surface } from 'react-native-paper';
+import { StyleSheet, View } from 'react-native';
+import { Surface, Text } from 'react-native-paper';
 import { pokemons } from '../data';
 import { RootStackParamList } from '../navigators/RootStackNavigator';
 
@@ -18,6 +17,7 @@ export default function DetailsScreen(props: Props) {
     <View style={styles.container}>
       <Text style={{paddingBottom:20, fontSize:40}}>Details Screen</Text>
       <Surface>
+        {/* <Text style={[s.text, {color: theme.colors.primary}]}>Pokemon name: {pokemon.name}</Text> */}
         <Text style={styles.text}>Pokemon name: {pokemon.name}</Text>
         <Text style={styles.text}>Pokemon type: {pokemon.type}</Text>
         <Text style={styles.text}>Pokemon rarity: {pokemon.rarity}</Text>

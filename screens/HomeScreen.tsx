@@ -1,6 +1,6 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
-import { Card, IconButton } from 'react-native-paper';
+import { Image, Pressable, StyleSheet, View } from 'react-native';
+import { Card, IconButton, Text } from 'react-native-paper';
 import { pokemons } from '../data';
 import { RootStackParamList } from '../navigators/RootStackNavigator';
 
