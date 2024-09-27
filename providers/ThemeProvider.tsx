@@ -8,8 +8,8 @@ import { StatusBar } from 'expo-status-bar';
 
 
 interface ContextValue{
-    isDarkMode: boolean;
-    setIsDarkMode: (value: boolean) => void;
+    colorMode: "light" | "dark" | "auto";
+    setColorMode: (value: "light" | "dark" | "auto") => void;
 }
 
 export const ThemeContext = createContext<ContextValue>({} as ContextValue);
@@ -17,12 +17,14 @@ export const ThemeContext = createContext<ContextValue>({} as ContextValue);
 export default function ThemeProvider({children}: PropsWithChildren){
 
    const colorSchema = useColorScheme();
-   const [isDarkMode, setIsDarkMode] = useState(colorSchema === "dark");
-   const theme = isDarkMode ? combinedDarkTheme : combinedLightTheme;
-  
+   const [colorMode, setColorMode] = useState<"light" | "dark" | "auto">("auto");
+
+   const theme = colorMode === "dark" || (colorMode === "auto" &&
+   colorSchema === "dark")? combinedDarkTheme : combinedLightTheme;
+
     return(
-        <ThemeContext.Provider value={{isDarkMode, setIsDarkMode}}>
-            <StatusBar style="auto" />
+        <ThemeContext.Provider value={{colorMode, setColorMode}}>
+            <StatusBar style={colorMode} /> /** ska fixas statusbar color */
             <PaperProvider theme={theme}>
                 <NavigationContainer theme={theme}>
                     {children}
