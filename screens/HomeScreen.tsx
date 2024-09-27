@@ -9,12 +9,12 @@ export default function HomeScreen({navigation, route}: Props) {
 
   return (
     <View style={styles.container}>
-      <Text>Details Screen</Text>
+      <Text style={styles.headerText}>Details Screen</Text>
         {pokemons.map((pokemon) => (
             <Pressable key={pokemon.name}
                 onPress={() => navigation.navigate("Details", {name: pokemon.name})}
                 style={{padding:10}}>
-                <Text>{pokemon.name}</Text>
+                <Text style={styles.text}>{pokemon.name}</Text>
             </Pressable>
         ))}
     </View>
@@ -27,4 +27,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 30,
   },
+  headerText:{
+    fontSize: 35,
+    paddingBottom: 25,
+  },
+   text:{
+    fontSize: 25,
+  }
 });
