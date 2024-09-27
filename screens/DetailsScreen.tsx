@@ -1,6 +1,6 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { StyleSheet, View } from 'react-native';
-import { Surface, Text } from 'react-native-paper';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { Button, Surface, Text } from 'react-native-paper';
 import { pokemons } from '../data';
 import { RootStackParamList } from '../navigators/RootStackNavigator';
 
@@ -14,7 +14,7 @@ export default function DetailsScreen(props: Props) {
   if(!pokemon) return null;
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={{paddingBottom:20, fontSize:40}}>Details Screen</Text>
       <Surface>
         {/* <Text style={[s.text, {color: theme.colors.primary}]}>Pokemon name: {pokemon.name}</Text> */}
@@ -22,15 +22,15 @@ export default function DetailsScreen(props: Props) {
         <Text style={styles.text}>Pokemon type: {pokemon.type}</Text>
         <Text style={styles.text}>Pokemon rarity: {pokemon.rarity}</Text>
       </Surface>  
-    </View>
+      <Button mode="contained">Fight</Button>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: 10,
+    gap: 10,
   },
   text:{
     fontSize: 25,

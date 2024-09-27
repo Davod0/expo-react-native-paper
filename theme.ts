@@ -24,6 +24,7 @@ export const combinedLightTheme: ThemeProp & Theme = {
         ...MD3LightTheme.colors,
         ...LightTheme.colors,
         primary: "#549356",
+        text: "#000000",
     },
 };
 
@@ -34,5 +35,6 @@ export const combinedDarkTheme = {
         ...MD3DarkTheme.colors,
         ...DarkTheme.colors,
         primary: "#64c366",
+        onSurface: "#f0a0a0",
     },
 } satisfies AppTheme;
