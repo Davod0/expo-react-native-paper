@@ -1,4 +1,4 @@
-interface Pokemon {
+export interface Pokemon {
     name: string;
     url: string;
     type: string;
@@ -16,42 +16,51 @@ export const pokemons: Pokemon[] = [
         rarity: "Common",
         hp: 35,
         attack: 55,
-        defense: 40
+        defense: 40,
     },
     {
-        name: "Charizard",
+        name: "Charmander",
         url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-        type: "Fire/Flying",
-        rarity: "Rare",
-        hp: 78,
-        attack: 84,
-        defense: 78
+        type: "Fire",
+        rarity: "Common",
+        hp: 39,
+        attack: 52,
+        defense: 43,
     },
     {
-        name: "Bulbasaur",
+        name: "Squirtle",
         url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
-        type: "Grass/Poison",
+        type: "Water",
+        rarity: "Common",
+        hp: 44,
+        attack: 48,
+        defense: 65,
+    },
+    {
+        name: "Caterpie",
+        url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+        type: "Bug",
         rarity: "Common",
         hp: 45,
-        attack: 49,
-        defense: 49
+        attack: 30,
+        defense: 35,
     },
     {
-        name: "Gengar",
-        url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
-        type: "Ghost/Poison",
-        rarity: "Rare",
-        hp: 60,
-        attack: 65,
-        defense: 60
-    },
-    {
-        name: "Lapras",
+        name: "Ekans",
         url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
-        type: "Water/Ice",
-        rarity: "Legendary",
-        hp: 130,
-        attack: 85,
-        defense: 80
-    }
+        type: "Poison",
+        rarity: "Common",
+        hp: 35,
+        attack: 60,
+        defense: 44,
+    },
+    {
+        name: "Pidgey",
+        url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+        type: "Normal",
+        rarity: "Common",
+        hp: 40,
+        attack: 45,
+        defense: 40,
+    },
 ];
