@@ -3,9 +3,9 @@ import DetailsScreen from "../screens/DetailsScreen";
 import HomeScreen from "../screens/HomeScreen";
 
 
-type RootStackParamList = {
+export type RootStackParamList = {
     Home: undefined;
-    Details: { id: number };
+    Details: { name: string };
 }
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
