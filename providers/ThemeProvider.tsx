@@ -1,10 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar } from 'expo-status-bar';
 import { createContext, PropsWithChildren, useState } from "react";
 import { useColorScheme } from "react-native";
 import { PaperProvider } from "react-native-paper";
 import { combinedDarkTheme, combinedLightTheme } from "../theme";
-import { StatusBar } from 'expo-status-bar';
-
 
 
 interface ContextValue{
@@ -24,7 +23,9 @@ export default function ThemeProvider({children}: PropsWithChildren){
 
     return(
         <ThemeContext.Provider value={{colorMode, setColorMode}}>
-            <StatusBar style={colorMode} /> /** ska fixas statusbar color */
+            <StatusBar style={
+                colorMode === "light"? "dark" : colorMode === "dark"? "light" : "auto"
+                } /> 
             <PaperProvider theme={theme}>
                 <NavigationContainer theme={theme}>
                     {children}

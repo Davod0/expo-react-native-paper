@@ -9,7 +9,6 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Details'>;
 
 export default function DetailsScreen(props: Props) {
 
-
   const pokemon = pokemons.find(pokemon => pokemon.name === props.route.params.name);
   if(!pokemon) return null;
 
@@ -17,7 +16,6 @@ export default function DetailsScreen(props: Props) {
     <ScrollView style={styles.container}>
       <Text style={{paddingBottom:20, fontSize:40}}>Details Screen</Text>
       <Surface>
-        {/* <Text style={[s.text, {color: theme.colors.primary}]}>Pokemon name: {pokemon.name}</Text> */}
         <Text style={styles.text}>Pokemon name: {pokemon.name}</Text>
         <Text style={styles.text}>Pokemon type: {pokemon.type}</Text>
         <Text style={styles.text}>Pokemon rarity: {pokemon.rarity}</Text>
